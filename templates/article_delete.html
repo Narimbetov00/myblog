@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1> Postti Oshiriw</h1>
+    <form method="post" enctype="multipart/form-data" >
+        {% csrf_token %}
+        <p>"{{ article.title }}" atli postti oshiriwdi qaleysizbe?</p>
+        <button type="submit" class="btn btn-danger">Awa</button>
+    </form>
+{% endblock content %}

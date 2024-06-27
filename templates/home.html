@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'D:\texnopost\PythonDev\Django_Practis\YouTobe\blog\static\css\home.css' %}">
+{% block content %}
+    <div class="container">
+        <div class="card">
+            {% if user.is_authenticated %}
+            <div class="card-menu">
+                <h1>{{ user.username | title }}</h1>
+                <p><a href="{% url 'article_list' %}">Fotolar</a></p>
+                <p><a href="{% url 'post_video' %}">Videolar</a></p>
+                <p><a href="{% url 'logout' %}">Shigiw</a></p>
+            </div>
+    
+    {% else %}
+    
+            <h1>Saytga kirmegensiz</h1>
+            <p><a href="{% url 'login' %}">Saytga Kiriw</a></p>
+            <p><a href="{% url 'signup' %}">Dizimnen otiw</a></p>
+        </div>
+    </div>
+    {% endif %}
+{% endblock content %}

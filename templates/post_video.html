@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for i in videos %}
+        <h1>{{ i.title }}</h1>
+        <video controls width="250"> 
+            <source src="{{ i.Videos.url }}" type="video/mp4" >    
+        </video>
+{% endfor %}
+{% endblock content %}

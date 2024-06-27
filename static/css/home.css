@@ -1,0 +1,18 @@
+.card {
+    border:  solid 2px;
+    
+    color: gray;
+    box-shadow: white;
+    
+}
+.container{
+    margin:0px 300px 0px;
+   
+}
+
+p {
+    font-size: 20px;
+    margin-left: 5px;
+    font-size: 30px;    
+}
+
